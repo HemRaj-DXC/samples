@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello Gp-Hub!!!"'
+                sh 'echo "Hello Build!!!"'
                 sh '''
                     echo "Welcome to Jenkins..."
                     echo "This is the new line in jenkins file"
@@ -12,5 +12,17 @@ pipeline {
                 '''
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+        
     }
+    
 }
